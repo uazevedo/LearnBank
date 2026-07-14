@@ -1,6 +1,6 @@
 <Solution>
+  <Project Path="LearnBank.Api/LearnBank.Api.csproj" />
   <Project Path="LearnBank.Application/LearnBank.Application.csproj" />
   <Project Path="LearnBank.Domain/LearnBank.Domain.csproj" />
   <Project Path="LearnBank.Infrastructure/LearnBank.Infrastructure.csproj" />
-  <Project Path="LearnBank/LearnBank.Api.csproj" />
 </Solution>
