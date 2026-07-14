@@ -1,0 +1,6 @@
+@LearnBank_HostAddress = http://localhost:5032
+
+GET {{LearnBank_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
