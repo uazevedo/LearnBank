@@ -3,14 +3,12 @@ using LearnBank.Domain.Exceptions;
 
 namespace LearnBank.Domain.Entities;
 
-public class User
+public class User : Entity
 {
-    public Guid Id { get; private set; }
     public string FullName { get; private set; }
     public string Email {get; private set; }
     public string TaxIdentificationNumber { get; private set; }
     public Gender Gender {get; private set; }
-    public DateTime CreatedAt { get; private set; }
 
     public User(
         string fullName,
@@ -28,11 +26,9 @@ public class User
         if(string.IsNullOrWhiteSpace(taxIdentificationNumber))
             throw new RequiredFieldException(nameof(taxIdentificationNumber));
 
-        Id = Guid.NewGuid();
         FullName = fullName;
         Email = email;
         TaxIdentificationNumber = taxIdentificationNumber;
         Gender = gender;
-        CreatedAt = DateTime.UtcNow;
     }
 }
