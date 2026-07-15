@@ -1,80 +1,85 @@
 # LearnBank
 
-> Um projeto open source para ensinar desenvolvimento Backend .NET moderno utilizando um domínio bancário como exemplo prático.
+> A hands-on open-source project to learn modern .NET backend development using a banking domain as a real-world example.
 
-O objetivo deste repositório **não é criar mais um banco digital**, mas servir como um guia de estudos para desenvolvedores que desejam aprender arquitetura enterprise, Domain-Driven Design (DDD), Clean Architecture e boas práticas utilizadas em sistemas reais.
+**LearnBank** is not intended to become another digital banking application.
 
-Todo o projeto está sendo desenvolvido do zero, explicando **o porquê** de cada decisão arquitetural, e não apenas **como** escrever código.
+Its purpose is to help developers understand **how enterprise backend systems are designed**, from basic CRUD operations to scalable architectures used in real-world financial applications.
+
+The focus is not only **how to write code**, but also **why architectural decisions are made**.
 
 ---
 
-# Objetivos
+# Goals
 
-Este projeto busca ensinar:
+This project aims to teach:
 
-- C# moderno
-- ASP.NET Core
+- Modern C#
+- ASP.NET Core Web API
 - Clean Architecture
 - Vertical Slice Architecture
 - CQRS
 - Domain-Driven Design (DDD)
-- SOLID
+- SOLID Principles
 - Design Patterns
 - Entity Framework Core
-- Arquitetura de sistemas bancários
-- Modelagem baseada em BIAN
-- Sistemas distribuídos
+- Financial domain modeling
+- BIAN concepts
+- Distributed Systems
 - RabbitMQ
 - Redis
 - Docker
-- Observabilidade
-- Testes
-- Boas práticas para projetos enterprise
+- Observability
+- Automated Testing
+- Enterprise software development practices
 
 ---
 
-# Público alvo
+# Who is this project for?
 
-Este projeto foi criado principalmente para:
+LearnBank was created for developers who want to:
 
-- Desenvolvedores iniciantes.
-- Desenvolvedores que desejam migrar para Backend .NET.
-- Desenvolvedores que desejam aprender arquitetura.
-- Pessoas se preparando para entrevistas técnicas.
-- Desenvolvedores que desejam entender como sistemas financeiros são modelados.
+- Learn backend development with .NET.
+- Build a strong software engineering foundation.
+- Understand enterprise architecture.
+- Prepare for technical interviews.
+- Learn how financial systems are modeled.
+- Move beyond CRUD applications.
 
 ---
 
-# Filosofia do projeto
+# Project Philosophy
 
-Durante o desenvolvimento serão evitadas soluções "mágicas".
+This repository intentionally avoids "magic" solutions.
 
-O foco é entender:
+Every architectural decision is explained.
 
-- por que determinada arquitetura existe;
-- qual problema ela resolve;
-- quando utilizá-la;
-- quando NÃO utilizá-la.
+The goal is to understand:
 
-Mais importante do que decorar Design Patterns é aprender a modelar corretamente o domínio.
+- Why does this architecture exist?
+- Which problem does it solve?
+- When should it be used?
+- When should it NOT be used?
+
+Learning **how to think** is more valuable than memorizing frameworks or design patterns.
 
 ---
 
 # Roadmap
 
-## Fase 1
+## Phase 1
 
-- [x] Estrutura da Solution
+- [x] Solution Structure
 - [x] Clean Architecture
-- [x] Vertical Slice
+- [x] Vertical Slice Architecture
 - [ ] User Aggregate
-- [ ] CreateUser
-- [ ] GetUserById
-- [ ] ListUsers
+- [ ] Create User
+- [ ] Get User By Id
+- [ ] List Users
 
 ---
 
-## Fase 2
+## Phase 2
 
 - [ ] Wallet Aggregate
 - [ ] Financial Position
@@ -85,7 +90,7 @@ Mais importante do que decorar Design Patterns é aprender a modelar corretament
 
 ---
 
-## Fase 3
+## Phase 3
 
 - [ ] Domain Events
 - [ ] Event Storming
@@ -94,7 +99,7 @@ Mais importante do que decorar Design Patterns é aprender a modelar corretament
 
 ---
 
-## Fase 4
+## Phase 4
 
 - [ ] RabbitMQ
 - [ ] Outbox Pattern
@@ -104,17 +109,16 @@ Mais importante do que decorar Design Patterns é aprender a modelar corretament
 
 ---
 
-## Fase 5
+## Phase 5
 
 - [ ] Docker
-- [ ] Testes unitários
-- [ ] Testes de integração
-- [ ] Hardening
-- [ ] Deploy
+- [ ] Unit Tests
+- [ ] Integration Tests
+- [ ] Production Hardening
 
 ---
 
-# Estrutura da Solution
+# Solution Structure
 
 ```text
 LearnBank.sln
@@ -141,7 +145,7 @@ docs/
 
 ---
 
-# Tecnologias
+# Technologies
 
 - .NET
 - ASP.NET Core
@@ -154,56 +158,70 @@ docs/
 
 ---
 
-# Arquitetura
+# Architecture
 
-O projeto utiliza:
+The project follows modern architectural principles, including:
 
 - Clean Architecture
 - Vertical Slice Architecture
 - CQRS
 - Rich Domain Model
-- Domain-Driven Design
+- Domain-Driven Design (DDD)
+
+The project intentionally starts simple and evolves incrementally, demonstrating how enterprise applications naturally grow over time.
 
 ---
 
-# Documentação
+# Documentation
 
-Ao longo do desenvolvimento serão adicionados documentos explicando:
+Throughout the development journey, documentation will be added covering:
 
-- decisões arquiteturais;
-- regras de negócio;
-- modelagem do domínio;
-- Event Storming;
-- Aggregate Roots;
-- BIAN;
-- ADRs (Architecture Decision Records).
+- Architectural decisions
+- Business rules
+- Domain modeling
+- Event Storming
+- Aggregate Roots
+- BIAN concepts
+- Architecture Decision Records (ADRs)
 
-O objetivo é que qualquer pessoa consiga entender não apenas o código, mas também o raciocínio utilizado durante a implementação.
-
----
-
-# Série no YouTube
-
-Este projeto fará parte de uma série.
-
-Durante os vídeos será explicado:
-
-- por que cada arquivo existe;
-- qual responsabilidade de cada camada;
-- como arquitetar aplicações reais;
-- erros comuns de iniciantes;
-- boas práticas utilizadas no mercado.
+The goal is for developers to understand both **the implementation** and **the reasoning behind it**.
 
 ---
 
-# Aviso
+# YouTube Series
 
-Este projeto é educacional.
+This repository accompanies a YouTube series where every feature is implemented from scratch.
 
-Ele não pretende reproduzir integralmente um sistema bancário real, mas sim utilizar esse domínio para demonstrar conceitos de engenharia de software de maneira prática.
+Topics include:
+
+- Why each file exists
+- Layer responsibilities
+- Enterprise architecture
+- Common mistakes made by junior developers
+- Best practices used in production systems
+
+Rather than simply copying code, viewers are encouraged to understand the design decisions behind every implementation.
 
 ---
 
-# Licença
+# Disclaimer
 
-MIT
+LearnBank is an educational project.
+
+It does **not** aim to fully replicate the complexity of a production banking platform.
+
+Instead, it uses the financial domain to demonstrate software engineering concepts that can be applied to many enterprise systems.
+
+---
+
+# Contributing
+
+Contributions, suggestions, discussions, and constructive feedback are always welcome.
+
+If you find the project useful, consider starring the repository and sharing it with other developers.
+
+---
+
+# License
+
+This project is licensed under the MIT License.
