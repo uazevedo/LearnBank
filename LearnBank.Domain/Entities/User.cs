@@ -1,4 +1,5 @@
 using LearnBank.Domain.Enums;
+using LearnBank.Domain.Exceptions;
 
 namespace LearnBank.Domain.Entities;
 
@@ -19,13 +20,13 @@ public class User
     )
     {
         if (string.IsNullOrWhiteSpace(fullName))
-            throw new ArgumentException("Fullname is required");
+            throw new RequiredFieldException(nameof(fullName));
 
         if(string.IsNullOrWhiteSpace(email))
-            throw new ArgumentException("Email is required");
+            throw new RequiredFieldException(nameof(email));
 
         if(string.IsNullOrWhiteSpace(taxIdentificationNumber))
-            throw new ArgumentException("TaxIdentificationNumber is required");
+            throw new RequiredFieldException(nameof(taxIdentificationNumber));
 
         Id = Guid.NewGuid();
         FullName = fullName;
