@@ -7,4 +7,5 @@ public record CreateUserResponse(
     string FullName,
     string Email,
     string TaxIdentificationNumber,
-    Gender Gender);
+    Gender Gender,
+    DateTime CreatedAt);
