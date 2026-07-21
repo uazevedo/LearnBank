@@ -12,7 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\LearnBank.Application\LearnBank.Application.csproj" />
+    <ProjectReference Include="..\LearnBank.Domain\LearnBank.Domain.csproj" />
+    <ProjectReference Include="..\LearnBank.Infrastructure\LearnBank.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

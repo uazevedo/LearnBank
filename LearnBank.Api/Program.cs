@@ -1,4 +1,8 @@
 
+using LearnBank.Application.Common.Interfaces.Persistence;
+using LearnBank.Application.Features.Users.CreateUser;
+using LearnBank.Persistence;
+
 namespace LearnBank
 {
     public class Program
@@ -12,6 +16,9 @@ namespace LearnBank
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
+
+            builder.Services.AddSingleton<IUserRepository, InMemoryUserRepository>();
+            builder.Services.AddScoped<CreateUserHandler>();
 
             var app = builder.Build();
 
