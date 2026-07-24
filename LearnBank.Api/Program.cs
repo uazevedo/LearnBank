@@ -1,6 +1,7 @@
 
 using LearnBank.Application.Common.Interfaces.Persistence;
 using LearnBank.Application.Features.Users.CreateUser;
+using LearnBank.Application.Features.Users.ListUsers;
 using LearnBank.Persistence;
 
 namespace LearnBank
@@ -19,6 +20,7 @@ namespace LearnBank
 
             builder.Services.AddSingleton<IUserRepository, InMemoryUserRepository>();
             builder.Services.AddScoped<CreateUserHandler>();
+            builder.Services.AddScoped<ListUsersHandler>();
 
             var app = builder.Build();
 
